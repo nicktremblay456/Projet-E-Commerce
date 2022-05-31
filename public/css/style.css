@@ -2,9 +2,8 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border-radius: 10px;
   overflow: hidden;
-  background-color: black;
+  background-color: rgba(19, 25, 33);
 }
 
 li {
@@ -18,4 +17,24 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
   box-shadow: #111;
+}
+
+.footer-basic {
+  margin-top: 10px;
+  padding:40px 0;
+  background-color:#000000;
+  color:white;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.signin-button {
+  margin-top: 5px;
+  background-color: rgba(243, 208, 120);
 }

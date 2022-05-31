@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
 
-    <? require('index.php'); ?>
-
     <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+
+    <? require('index.php'); ?>
 </head>
 <header class="accueil_header">
     <?= $header ?>
 </header>
 <body>
-    
+    <?= $accueilBody ?>
+
+    <?= $footer ?>
 </body>
 </html>
