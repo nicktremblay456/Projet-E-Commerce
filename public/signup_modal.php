@@ -21,7 +21,7 @@
 
             <!--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
 
-            <div class="clearfix">
+            <div class="container clearfix" style="background-color:#f1f1f1">
                 <button type="submit" class="button-modal">Sign Up</button>
                 <button type="button" class="button-modal" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
             </div>
