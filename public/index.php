@@ -13,3 +13,8 @@ $footer = ob_get_clean();
 ob_start();
 require('accueil_body.php');
 $accueilBody = ob_get_clean();
+
+# the body for main page (Magasin)
+ob_start();
+require('magasin_body.php');
+$magasinBody = ob_get_clean();

@@ -40,13 +40,15 @@ li a {
 }
 
 .search-bar {
-  vertical-align: center;
+  display: block;
+  text-align:center;
   border: 2px;
   border-color: black;
 }
 
 .search-bar input[type=text] {
-  float: right;
+  
+  float: center;
   padding: 6px;
   border: none;
   margin-top: 8px;
@@ -57,13 +59,17 @@ li a {
 .magasin-content .sidebar {
   align-self: center;
   border: 2px;
+  border-style: solid;
   border-color: #111;
 }
 
 .magasin-content {
+  display: inline-block;
   margin: 1rem;
   padding: 2rem 2rem;
-  text-align: center;
+  text-align: left;
+  vertical-align: middle;
+  
 }
 
 .sidebar {
@@ -73,9 +79,10 @@ li a {
 }
 
 .container-content {
-  display: inline-block;
+  display: flex;
   padding: 1rem 1rem;
-  vertical-align: middle;
+  vertical-align: top;
+  float: right;
 }
 
 /* Customize the label (the container) */
