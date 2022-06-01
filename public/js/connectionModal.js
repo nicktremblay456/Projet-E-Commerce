@@ -1,18 +1,17 @@
 // Get the modal
-var modal = document.getElementById('id01');
+let loginModal = document.getElementById('id01');
+let signupModal = document.getElementById('id02');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
 }
 
-var modal2 = document.getElementById('id02');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
+    if (event.target == signupModal) {
+        signupModal.style.display = "none";
+    }
 }
