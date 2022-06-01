@@ -1,4 +1,3 @@
-
 <div class="container">
     <div class="row">
         <?
@@ -14,6 +13,7 @@
                             </svg></a>
                     </div>
                 </div>
-            <?  } ?>   
-        </div>
+            </div>
+        <?  } ?>
+    </div>
 </div>
