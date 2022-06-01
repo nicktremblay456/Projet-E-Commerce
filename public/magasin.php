@@ -14,7 +14,7 @@
     <?= $header ?>
 </header>
 
-<body>
+<body id="body">
     <?= $magasinBody ?>
     <?= $footer ?>
 </body>

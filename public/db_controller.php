@@ -1,7 +1,7 @@
 <?php
 
 # connection string TO DO -> change the dbname by the official name
-$dsn = "mysql:host=localhost;dbname=...;charset=UTF8";
+$dsn = "mysql:host=localhost;dbname=e-commerce;charset=UTF8";
 
 # connect to db PDO(connection string, root, password)
 try {

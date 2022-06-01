@@ -39,34 +39,22 @@
   background-color: rgba(243, 208, 120);
 }
 
-.search-bar {
-  display: block;
-  text-align:center;
-  border: 2px;
-  border-color: black;
+ .col-content{
+  padding-bottom: 10px;
 }
-
-.search-bar input[type=text] {
-  
-  float: center;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
 .magasin-content .sidebar {
   align-self: center;
   border: 2px;
   border-style: solid;
   border-color: #111;
+  width: 200px;
+  height: 500px;
 }
 
 .magasin-content {
   display: inline-block;
   margin: 1rem;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   text-align: left;
   vertical-align: middle;
   
@@ -80,11 +68,60 @@
 
 .container-content {
   display: flex;
-  padding: 1rem 1rem;
   vertical-align: top;
   float: right;
 }
 
+
+#nav {
+  width:500px;
+  margin:0 auto;
+  list-style:none;
+  }
+
+  #nav li {
+  float:left;
+  }
+  
+  #nav a {
+  display:block;
+  text-align:center;
+  width:50px; /* fixed width */
+  text-decoration:none; 
+  }
+
+  form.search-bar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    margin-top: 30px;
+  }
+  
+  form.search-bar button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #0d6efd;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  form.search-bar button:hover {
+    background: #0b7dda;
+  }
+  
+  form.search-bar::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /* Customize the label (the container) */
 .filters {
   display: block;
