@@ -1,10 +1,10 @@
 <?php
 
-# header user for every page
+# header used for every page
 ob_start();
 require('header.php');
 $header = ob_get_clean();
-#footer for every page
+#footer used for every page
 ob_start();
 require('footer.php');
 $footer = ob_get_clean();
