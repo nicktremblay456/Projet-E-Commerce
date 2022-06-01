@@ -15,6 +15,8 @@
 </header>
 
 <body id="body">
+    <?= $loginModal ?>
+    <?= $signupModal ?>
     <?= $magasinBody ?>
     <?= $footer ?>
 </body>
