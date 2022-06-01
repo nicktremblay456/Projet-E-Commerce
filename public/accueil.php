@@ -12,9 +12,12 @@
 
     <? require('index.php'); ?>
 </head>
-<body>
+<body id="body">
     <?= $header ?>
-    
+
+    <?= $loginModal ?>
+    <?= $signupModal ?>
+
     <?= $accueilBody ?>
 
     <?= $footer ?>
