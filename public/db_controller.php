@@ -15,4 +15,4 @@ function sqlQuery($query) {
     return $pdo->query($query)->fetchAll();
 }
 
-$getAllProduct = sqlQuery("SELECT * FROM ...;");
+$getAllProduct = sqlQuery("SELECT * FROM Produit;");

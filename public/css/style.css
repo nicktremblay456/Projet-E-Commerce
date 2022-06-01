@@ -62,7 +62,7 @@ button:hover {
   border-style: solid;
   border-color: #111;
   width: 200px;
-  height: 500px;
+  height: 505px;
 }
 
 .magasin-content {
@@ -78,6 +78,7 @@ button:hover {
   display: inline-block;
   padding: 1rem 1rem;
   vertical-align: left;
+  background-color: white;
 }
 
 .container-content {
@@ -88,9 +89,10 @@ button:hover {
 
 
 #nav {
-  width:500px;
+  width:300px;
   margin:0 auto;
   list-style:none;
+  align-content: center;
   }
 
   #nav li {
@@ -222,7 +224,8 @@ input[type=text], input[type=password] {
 }
 
 .container {
-  padding: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 span.psw {

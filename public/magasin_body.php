@@ -1,11 +1,11 @@
-<? $sortResult = 4;
+<? $sortResult = 8;
   $sortResultDiv = $sortResult / 4;
 ?>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <form class="search-bar" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Recherche.." name="search2">
+  <input type="text" placeholder="Recherche.." name="userSearch">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
@@ -41,23 +41,22 @@
     </div>
     <div class="container-content">
         <div class="container">  
-        <? for ($n = 0; $n < $sortResultDiv; $n++){ ?>
-            <div class="row">
-            <? for ($i = 0; $i < 4; $i++) { ?>
-                <div class="col col-content">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../src/placeholder.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <? for ($n = 0; $n < $sortResultDiv; $n++){ ?>
+                <div class="row">
+                    <? for ($i = 0; $i < 4; $i++) { ?>
+                        <div class="col col-content">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../src/placeholder.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    <? } ?> 
                 </div>
-               <? } ?> 
-               <? } ?>   
-            </div>
-
+            <? } ?>   
         </div>
     </div>
 </div>
@@ -70,10 +69,12 @@
             <li class="page-item active" aria-current="page">
                 <span class="page-link">1</span>
             </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <? if ($sortResultDiv > 1){
+                for ($x = 2; $x <= $sortResultDiv; $x++){ ?>
+                    <li class="page-item"><a class="page-link" href="#"> <?=$x?></a></li>
+
+                    <? } ?>
+            <? } ?>
             <li class="page-item">
                 <a class="page-link" href="#">Next</a>
             </li>
