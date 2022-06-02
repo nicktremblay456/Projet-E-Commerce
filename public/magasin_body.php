@@ -4,10 +4,12 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form class="search-bar" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Recherche.." name="userSearch">
+
+
+<form class="search-bar" action="search.php" style="margin:auto;max-width:300px" method="get">
+  <input type="text" placeholder="Recherche.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+</form>  
 
 <div class="magasin-content">
     <div class="sidebar">
@@ -46,7 +48,7 @@
                     <? for ($i = 0; $i < 4; $i++) { ?>
                         <div class="col col-content">
                             <div class="card" style="width: 18rem;">
-                                <img src="../src/placeholder.jpg" class="card-img-top" alt="...">
+                                <img src="../src/reactine.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
