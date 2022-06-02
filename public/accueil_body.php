@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="row" style="background-color: white;">
-        <h2>Les plus demandés dans DVD et Blu-ray</h2><br>
+<div class="container" style="background-color: white; margin-top: 10px;">
+    <h2>Les plus demandés dans DVD et Blu-ray</h2><br>
+    <div class="row">
         <?
         for ($i = 0; $i < 6; $i++) { ?>
             <div class="col">
@@ -19,9 +19,9 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row" style="background-color: white;">
-        <h2>Les plus demandés dans jeux vidéo</h2><br>
+<div class="container" style="background-color: white; margin-top: 10px">
+    <h2>Les plus demandés dans jeux vidéo</h2><br>
+    <div class="row">
         <?
         for ($i = 0; $i < 6; $i++) { ?>
             <div class="col">
