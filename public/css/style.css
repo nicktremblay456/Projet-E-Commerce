@@ -92,6 +92,7 @@ span.psw {
 }
 
 .header-button {
+  width: 100px;
   margin: 8px 8px;
 }
 
@@ -102,7 +103,7 @@ span.psw {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 150px;
+  width: 100px;
   opacity: 0.9;
 }
 
