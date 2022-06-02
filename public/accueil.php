@@ -14,12 +14,9 @@
 </head>
 <body id="body">
     <?= $header ?>
-
     <?= $loginModal ?>
     <?= $signupModal ?>
-
     <?= $accueilBody ?>
-
     <?= $footer ?>
 </body>
 </html>

@@ -1,8 +1,7 @@
 <div class="container" style="background-color: white; margin-top: 10px;">
     <h2>Les plus demandés dans DVD et Blu-ray</h2><br>
     <div class="row">
-        <?
-        for ($i = 0; $i < 6; $i++) { ?>
+        <? for ($i = 0; $i < 6; $i++) { ?>
             <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px;">
                     <img src="..." class="card-img-top" alt="...">
