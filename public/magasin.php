@@ -10,11 +10,9 @@
     <title>Document</title>
     <? require('index.php') ?>
 </head>
-<header class="accueil_header">
-    <?= $header ?>
-</header>
 
 <body id="body">
+    <?= $header ?>
     <?= $loginModal ?>
     <?= $signupModal ?>
     <?= $magasinBody ?>

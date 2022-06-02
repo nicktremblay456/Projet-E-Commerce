@@ -62,7 +62,7 @@
         </div>
     </div>
 </div>
-<div >
+<div>
     <nav aria-label="Search results pages">
         <ul id="nav" class="pagination">
             <li class="page-item disabled">

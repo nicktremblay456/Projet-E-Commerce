@@ -53,11 +53,12 @@ button:hover {
   opacity: 0.8;
 }
 
- .col-content{
+.col-content {
   padding-bottom: 10px;
 }
+
 .magasin-content .sidebar {
-  align-self: center;
+  align-self: top;
   border: 2px;
   border-style: solid;
   border-color: #111;
@@ -66,22 +67,24 @@ button:hover {
 }
 
 .magasin-content {
-  display: inline-block;
+  display: flex;
+  top: 0;
   margin: 1rem;
   padding: 1rem 1rem;
   text-align: left;
   vertical-align: middle;
-  
+
 }
 
 .sidebar {
+  flex-grow: 1;
   display: inline-block;
   padding: 1rem 1rem;
-  vertical-align: left;
   background-color: white;
 }
 
 .container-content {
+  flex-grow: 2;
   display: flex;
   vertical-align: top;
   float: right;
@@ -89,55 +92,56 @@ button:hover {
 
 
 #nav {
-  width:300px;
-  margin:0 auto;
-  list-style:none;
-  align-content: center;
-  }
+  width: 300px;
+  margin: 0 auto;
+  list-style: none;
+}
 
-  #nav li {
-  float:left;
-  }
-  
-  #nav a {
-  display:block;
-  text-align:center;
-  width:50px; /* fixed width */
-  text-decoration:none; 
-  }
+#nav li {
+  float: left;
+}
 
-  form.search-bar input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-    margin-top: 30px;
-  }
-  
-  form.search-bar button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #0d6efd;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-    margin-top: 30px;
-  }
-  
-  form.search-bar button:hover {
-    background: #0b7dda;
-  }
-  
-  form.search-bar::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+#nav a {
+  display: block;
+  text-align: center;
+  width: 50px;
+  /* fixed width */
+  text-decoration: none;
+}
+
+form.search-bar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  margin-top: 30px;
+}
+
+form.search-bar button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #0d6efd;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form.search-bar button:hover {
+  background: #0b7dda;
+}
+
+form.search-bar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Customize the label (the container) */
 .filters {
   display: block;
@@ -204,10 +208,13 @@ button:hover {
   background: white;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -235,25 +242,35 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
   padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -290,22 +307,33 @@ span.psw {
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
+
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
