@@ -10,9 +10,18 @@ try {
     echo 'Exception: ',  $e->getMessage(), "\n";
 }
 
-function sqlQuery($query) {
+function connectToDB() {
     global $pdo;
-    return $pdo->query($query)->fetchAll();
+    if ($pdo) {
+        echo "Connection réussi";
+    } else {
+        echo "Connection échoué";
+    }
 }
 
-$getAllProduct = sqlQuery("SELECT * FROM Produit;");
+function sqlQuery($query) {
+    global $pdo;
+    return $pdo->query($query);
+}
+
+#$getAllProduct = sqlQuery("SELECT * FROM Produit;")->fetchAll();
