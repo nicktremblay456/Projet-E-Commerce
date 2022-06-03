@@ -109,6 +109,15 @@ span.psw {
   opacity: 0.9;
 }
 
+.best-seller-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  background-color: white; 
+  margin-top: 10px; 
+  padding-left: 125px;
+}
+
 .col-content {
   padding-bottom: 10px;
 }

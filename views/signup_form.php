@@ -3,9 +3,9 @@ require('db_controller.php');
 
 $accepted = true;
 
-$username = $_GET['username'];
-$email = $_GET['email'];
-$psw = $_GET['psw'];
+$username = $_POST['username'];
+$email = $_POST['email'];
+$psw = $_POST['psw'];
 
 $hashPsw = hash("sha256", $psw);
 
@@ -16,7 +16,9 @@ foreach ($getAllAccount as $row) {
     }
 }
 if ($accepted) {
-    sqlQuery("INSERT INTO client (UserName, Email, Password) VALUES (" . "'$username'" . "," . "'$email'" . "," . "'$hashPsw'" . ");");
+    #sqlQueryPrepare("INSERT INTO client (UserName, Email, Password) VALUES (" . "'$username'" . "," . "'$email'" . "," . "'$hashPsw'" . ");");
+    sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw);",
+                    [':username' => $username, ':email' => $email, ':psw' => $hashPsw]);
 }
 ?>
 
@@ -32,9 +34,7 @@ if ($accepted) {
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
-    <? require('index.php') ?>
-</head>
+</head> 
 
 <body id="body" class="d-flex flex-column min-vh-100">
     <?= $header ?>

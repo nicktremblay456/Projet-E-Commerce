@@ -24,4 +24,9 @@ function sqlQuery($query) {
     return $pdo->query($query);
 }
 
+function sqlQueryPrepare($query, $array) {
+    global $pdo;
+    return $pdo->prepare($query)->execute($array);
+}
+
 #$getAllProduct = sqlQuery("SELECT * FROM Produit;")->fetchAll();

@@ -1,4 +1,4 @@
-<div class="container" style="background-color: white; margin-top: 10px;">
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; background-color: white; margin-top: 10px; padding-left: 125px;">
     <h2>Les plus demandés dans DVD et Blu-ray</h2><br>
     <div class="row">
         <? for ($i = 0; $i < 6; $i++) { ?>
@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<div class="container" style="background-color: white; margin-top: 10px">
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; background-color: white; margin-top: 10px; padding-left: 125px;">
     <h2>Les plus demandés dans jeux vidéo</h2><br>
     <div class="row">
         <?
