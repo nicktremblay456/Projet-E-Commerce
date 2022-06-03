@@ -7,6 +7,7 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $psw = $_POST['psw'];
 
+# password_hash();
 $hashPsw = hash("sha256", $psw);
 
 $getAllAccount = sqlQuery("SELECT * FROM client;")->fetchAll();
@@ -16,7 +17,6 @@ foreach ($getAllAccount as $row) {
     }
 }
 if ($accepted) {
-    #sqlQueryPrepare("INSERT INTO client (UserName, Email, Password) VALUES (" . "'$username'" . "," . "'$email'" . "," . "'$hashPsw'" . ");");
     sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw);",
                     [':username' => $username, ':email' => $email, ':psw' => $hashPsw]);
 }
