@@ -77,9 +77,11 @@ span.psw {
 }
 
 .footer-basic {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
-  padding: 40px 0;
-  background-color: #000000;
+  padding: 50px 0;
+  background-color: rgba(19, 25, 33);
   color: white;
 }
 
@@ -122,7 +124,6 @@ span.psw {
 
 .magasin-content {
   display: flex;
-  top: 0;
   margin: 1rem;
   padding: 1rem 1rem;
   text-align: left;
@@ -131,7 +132,6 @@ span.psw {
 }
 
 .sidebar {
-  flex-grow: 1;
   display: inline-block;
   padding: 1rem 1rem;
   background-color: white;
@@ -337,5 +337,15 @@ span.psw {
 
   .cancelbtn {
     width: 100%;
+  }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
   }
 }

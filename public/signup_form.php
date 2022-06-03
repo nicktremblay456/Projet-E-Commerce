@@ -56,7 +56,7 @@ if ($accepted) {
     <? } else { ?>
         <div class="card" style="width: 50%; margin: auto; margin-top: 10px;">
             <div class="card-body">
-                <h5 class="card-title">Le nom d'utilisateur ou le email est déjà utilisé...</h5>
+                <h5 class="card-title">Le nom d'utilisateur et/ou le email est déjà utilisé...</h5>
             </div>
         </div>
     <? } ?>
