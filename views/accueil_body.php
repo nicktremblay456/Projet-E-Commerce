@@ -14,15 +14,14 @@
                     </div>
                 </div>
             </div>
-        <?  } ?>
+        <? } ?>
     </div>
 </div>
 
 <div class="container" style="display: flex; flex-direction: column; justify-content: center; background-color: white; margin-top: 10px; padding-left: 125px;">
     <h2>Les plus demandés dans jeux vidéo</h2><br>
     <div class="row">
-        <?
-        for ($i = 0; $i < 6; $i++) { ?>
+        <? for ($i = 0; $i < 6; $i++) { ?>
             <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px;">
                     <img src="..." class="card-img-top" alt="...">
@@ -35,6 +34,6 @@
                     </div>
                 </div>
             </div>
-        <?  } ?>
+        <? } ?>
     </div>
 </div>
