@@ -1,14 +1,14 @@
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate" action="/login" method="post">
         <div class="container">
             <h1>Login</h1>
             <p>Please fill in this form to login</p>
             <hr>
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="username" name="username" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
 
             <!--<label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
