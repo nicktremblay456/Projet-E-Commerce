@@ -31,9 +31,6 @@ function generateViews()
     require($ROOT_PATH . 'views/accueil_body.php');
     $GLOBALS["accueilBody"] = ob_get_clean();
     ob_start();
-    require($ROOT_PATH . 'views/magasin_body.php');
-    $GLOBALS["magasinBody"] = ob_get_clean();
-    ob_start();
     require($ROOT_PATH . "views/checkout_body.php");
     $GLOBALS["checkoutBody"] = ob_get_clean();
 }
