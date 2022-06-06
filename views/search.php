@@ -17,7 +17,7 @@
     <?= $header ?>
     <?= $loginModal?>
     <?= $signupModal ?>
-    
+
     <form class="search-bar" action="/search" style="margin:auto;max-width:300px" method="post">
         <input type="text" placeholder="Recherche.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
@@ -72,6 +72,22 @@
         </div>
     </div>
 
+    <div>
+        <nav aria-label="Search results pages">
+            <ul id="nav" class="pagination">
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#"> 2</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <?= $footer ?>
 </body>
 
