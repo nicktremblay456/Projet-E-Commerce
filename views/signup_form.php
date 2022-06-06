@@ -1,27 +1,3 @@
-<?php
-require('db_controller.php');
-
-$accepted = true;
-
-$username = $_POST['username'];
-$email = $_POST['email'];
-$psw = $_POST['psw'];
-
-# password_hash();
-$hashPsw = hash("sha256", $psw);
-
-$getAllAccount = sqlQuery("SELECT * FROM client;")->fetchAll();
-foreach ($getAllAccount as $row) {
-    if ($username === $row["UserName"] || $email === $row["Email"]) {
-        $accepted = false;
-    }
-}
-if ($accepted) {
-    sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw);",
-                    [':username' => $username, ':email' => $email, ':psw' => $hashPsw]);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 

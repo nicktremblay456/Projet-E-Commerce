@@ -1,5 +1,5 @@
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="login_form.php">
+    <form class="modal-content animate" action="/login" method="post">
         <div class="container">
             <h1>Login</h1>
             <p>Please fill in this form to login</p>
