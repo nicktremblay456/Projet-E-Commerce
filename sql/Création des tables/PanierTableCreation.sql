@@ -7,4 +7,3 @@ primary key(ID),
 foreign key(Clientid) references client(Clientid),
 foreign key(Itemid) references produit(ID)
 );
-
