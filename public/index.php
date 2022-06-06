@@ -71,4 +71,7 @@ switch ($route) {
     case '/logout':
         require $ROOT_PATH . "src/controllers/logout.php";
         break;
+    case '/search':
+        require $ROOT_PATH . "src/controllers/search_controller.php";
+        break;
 }
