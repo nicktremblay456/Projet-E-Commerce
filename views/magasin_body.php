@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<form class="search-bar" action="/search" style="margin:auto;max-width:300px" method="get">
+<form class="search-bar" action="/search" style="margin:auto;max-width:300px" method="post">
   <input type="text" placeholder="Recherche.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>  
