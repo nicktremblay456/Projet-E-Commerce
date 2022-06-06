@@ -1,5 +1,6 @@
-create table catégorie 
-(
-ID int AUTO_INCREMENT PRIMARY KEY,
-    Catégorie_Type varchar(255) NOT NULL
+CREATE TABLE Client (
+    Clientid int NOT NULL AUTO_INCREMENT Primary key,
+    UserName varchar(255) NOT NULL,
+    Email varchar(255),
+    Password varchar(255)
 );
