@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(230, 227, 227);
 }
 
 /* Full-width input fields */
@@ -304,10 +305,6 @@ textarea {
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
-}
-
-#body {
-  background-color: rgba(230, 227, 227);
 }
 
 #nav {

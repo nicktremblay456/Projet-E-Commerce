@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body id="body">
+<body>
     <?= $header ?>
 
     <?= $loginModal ?>

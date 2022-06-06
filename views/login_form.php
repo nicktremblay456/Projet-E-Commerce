@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
-<body id="body" class="d-flex flex-column min-vh-100">
+<body>
     <?= $header ?>
     <? if (isset($_SESSION['username']) && isset($_SESSION['psw'])) { ?>
         <div class="card" style="width: 50%; margin: auto; margin-top: 10px;">

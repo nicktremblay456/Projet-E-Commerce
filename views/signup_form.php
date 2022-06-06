@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head> 
 
-<body id="body" class="d-flex flex-column min-vh-100">
+<body>
     <?= $header ?>
 
     <?= $loginModal ?>
