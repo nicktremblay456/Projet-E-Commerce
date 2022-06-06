@@ -26,6 +26,8 @@ if (isset($_POST['search'])) {
 
 <body id="body" class="d-flex flex-column min-vh-100">
     <?= $header ?>
+    <?= $loginModal?>
+    <?= $signupModal ?>
     <form class="search-bar" action="/search" style="margin:auto;max-width:300px" method="post">
         <input type="text" placeholder="Recherche.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
