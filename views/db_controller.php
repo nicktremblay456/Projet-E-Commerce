@@ -1,11 +1,12 @@
 <?php
 
 # connection string
-$dsn = "mysql:host=localhost;dbname=e-commerce;charset=UTF8";
+$_ENV = require $ROOT_PATH . "config.php";
+$dsn = "mysql:host=".$_ENV['host'].";dbname=".$_ENV['dbname'].";charset=UTF8";
 
 # connect to db PDO(connection string, root, password)
 try {
-    $pdo = new PDO($dsn, "root", "");
+    $pdo = new PDO($dsn, $_ENV['username'], $_ENV['password']);
 } catch (Exception $e) {
     echo 'Exception: ',  $e->getMessage(), "\n";
 }
@@ -28,5 +29,3 @@ function sqlQueryPrepare($query, $array) {
     global $pdo;
     return $pdo->prepare($query)->execute($array);
 }
-
-#$getAllProduct = sqlQuery("SELECT * FROM Produit;")->fetchAll();
