@@ -14,6 +14,7 @@
 
 <body>
     <?= $header ?>
+    
     <? if (isset($_SESSION['username']) && isset($_SESSION['psw'])) { ?>
         <div class="card" style="width: 50%; margin: auto; margin-top: 10px;">
             <div class="card-body" style="text-align: center;">
