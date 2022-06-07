@@ -18,15 +18,15 @@ foreach ($accounts as $row) {
             $_SESSION['username'] = $username;
             $_SESSION['psw'] = $psw;
 
-            #setcookie(
-            #    $username,
-            #    [
-            #        'expires' => time() + 365*24*3600,
-            #        'secure' => true,
-            #        'httponly' => true,
-            #    ]
-            #);
-            #echo $_COOKIE[$username];
+            setcookie(
+                'LOGGED_USER',
+                $row['Email'],
+                [
+                    'expires' => time() + 365*24*3600,
+                    'secure' => true,
+                    'httponly' => true,
+                ]
+            );
             break;
         }
     }
