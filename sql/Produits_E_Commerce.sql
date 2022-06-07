@@ -12,7 +12,7 @@ Values
 ('Bureau pour PC', 'Furinno Bureau informatique Go Green Home 11193CWN/BK/DBR avec étagères, 2 tiroirs poubelles, Colombie Noyer/Noir/Marron foncé', 300, 30, 2, 'desk.jpg'), 
 ('Samsung Galaxie', 'A03s Caméra arrière 13P + 2MP + 2MP + Batterie longue durée 5000 mAh 4G LTE Noir 32 Go', 200, 25, 2, 'cell.jpg'), 
 
-('PlayStation', 'Super Retro Classic Console de jeu vidéo, lecteur de télévision intégré 400 jeux avec double manettes', 150, 7, 3, 'PlayStation.jpg'), 
+('Super Nintendo', 'Super Retro Classic Console de jeu vidéo, lecteur de télévision intégré 400 jeux avec double manettes', 150, 7, 3, 'PlayStation.jpg'), 
 ('LeapFrog', 'LeapFrog LeapLand Adventures Learning TV Jeu vidéo – Édition anglais, manette sans fil avec clé de jeu HDMI Plug and Play pour enfants à partir de 3 ans', 40, 15, 3, 'LeapFrog.jpg'),
 ('Carte graphique', 'mémoire GDDR6 16 Go', 600, 10, 3,'Game_card.jpg'), 
 ('SpiderMan', 'Marvels SpiderMan_Game of the Year', 30, 1, 3, 'SpiderMan.jpg'),
