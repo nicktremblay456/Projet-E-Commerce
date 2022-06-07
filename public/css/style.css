@@ -305,6 +305,16 @@ textarea {
   animation: animatezoom 0.6s
 }
 
+#container-best-seller {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around; 
+  background-color: white; 
+  margin-top: 10px; 
+  padding-left: 62px; 
+  padding-right: 62px;
+}
+
 #nav {
   width: 300px;
   margin: 0 auto;
