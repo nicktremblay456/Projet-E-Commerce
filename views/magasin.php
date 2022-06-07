@@ -57,7 +57,7 @@
                 <div class='row'>
                     <? foreach ($allProducts as $row) { ?>
                         <div class='col col-content'>
-                            <div class='card' style='width: 18rem;'>
+                            <div class='card h-100' style='width: 18rem;'>
                                 <img src='../img/<?= $row['Path'] ?>' class='card-img-top' alt='...'>
                                 <div class='card-body'>
                                     <h5 class='card-title'><?= $row['Name'] ?></h5>
