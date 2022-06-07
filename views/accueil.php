@@ -23,7 +23,7 @@
         <div class="row">
             <? for ($i = 0; $i < count($videoGames)/2; $i++) { ?>
                 <div class="col">
-                    <div class="card" style="width: 18rem; margin-bottom: 10px;">
+                    <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $videoGames[$i]['Path'] ?>' class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $videoGames[$i]['Name'] ?></h5>
@@ -44,7 +44,7 @@
         <div class="row">
             <? for ($i = 0; $i < count($sports)/2; $i++) { ?>
                 <div class="col">
-                    <div class="card" style="width: 18rem; margin-bottom: 10px;">
+                    <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $sports[$i]['Path'] ?>' class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $sports[$i]['Name'] ?></h5>
@@ -65,7 +65,7 @@
         <div class="row">
             <? for ($i = 0; $i < count($clothes)/2; $i++) { ?>
                 <div class="col">
-                    <div class="card" style="width: 18rem; margin-bottom: 10px;">
+                    <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $clothes[$i]['Path'] ?>' class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $clothes[$i]['Name'] ?></h5>
