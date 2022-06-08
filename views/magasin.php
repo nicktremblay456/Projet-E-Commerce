@@ -25,30 +25,30 @@
     <div class="magasin-content">
         <div class="sidebar">
             <label class="filters">Catégorie 1
-                <input type="radio" name="radio">
+                <input id="1" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Catégorie 2
-                <input type="radio" name="radio">
+                <input id="2" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Catégorie 3
-                <input type="radio" name="radio">
+                <input id="3" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Catégorie 4
-                <input type="radio" name="radio">
+                <input id="4" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
             <label class="filters">Catégorie 5
-                <input type="radio" name="radio">
+                <input id="5" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
             <label class="filters">Catégorie 6
-                <input type="radio" name="radio">
+                <input id="6" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -56,7 +56,7 @@
             <div class='container'>
                 <div class='row'>
                     <? foreach ($allProducts as $row) { ?>
-                        <div class='col col-content'>
+                        <div name='<?= $row['Category'] ?>' class='col col-content'>
                             <div class='card h-100' style='width: 18rem;'>
                                 <img src='../img/<?= $row['Path'] ?>' class='card-img-top' alt='...'>
                                 <div class='card-body'>
@@ -94,6 +94,8 @@
         </nav>
     </div>
     <?= $footer ?>
+
+    <script src="js/sidebarFilter.js"></script>
 </body>
 
 </html>
