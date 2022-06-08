@@ -2,9 +2,7 @@ let parent = document.getElementsByClassName("col col-content");
 let radioButtons = document.getElementsByName("radio");
 radioButtons.forEach(radio => {
     radio.addEventListener('change', e => {
-        console.log(e.srcElement.id);
-
-        filterMagasin(e.srcElement.id);
+        filterMagasin(e.target.id);
     })
 });
 
