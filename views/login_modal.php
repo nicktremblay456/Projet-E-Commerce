@@ -15,7 +15,7 @@
             </label>-->
         </div>
         
-        <div class="container clearfix" style="background-color:#f1f1f1">
+        <div class="container clearfix" >
             <button type="submit" class="button-modal">Login</button>
             <button class="button-modal" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
             <!--<span class="psw">Forgot <a href="#">password?</a></span>-->

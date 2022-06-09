@@ -58,7 +58,7 @@
                 <input id="7" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            
+
             <label class="filters">Vêtements
                 <input id="8" type="radio" name="radio">
                 <span class="checkmark"></span>
@@ -91,7 +91,7 @@
 
     <div>
         <nav aria-label="Search results pages">
-            <ul id="nav" class="pagination">
+            <ul id="nav" class="pagination justify-content-center">
                 <li class="page-item disabled">
                     <span class="page-link">Previous</span>
                 </li>
