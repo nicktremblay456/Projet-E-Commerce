@@ -106,6 +106,7 @@
         </nav>
     </div>
     <?= $footer ?>
+    <script src="js/sidebarFilter.js"></script>
 </body>
 
 </html>
