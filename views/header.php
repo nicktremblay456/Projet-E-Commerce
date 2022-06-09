@@ -9,6 +9,7 @@
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Login</button>
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Sign Up</button>
             <? } else { ?>
+                <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= $_SESSION['username'] ?></strong></p>
                 <a href="/logout" class="btn btn-primary header-button" style="width: 120px;">Déconnexion</a>
                 <a href="/checkout" class="btn btn-primary header-button"> 0 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">

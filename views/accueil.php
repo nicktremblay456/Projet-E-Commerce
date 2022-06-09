@@ -17,7 +17,6 @@
 
     <?= $loginModal ?>
     <?= $signupModal ?>
-
     <div id="container-best-seller" class="container">
         <h2>Les plus demandés dans Jeux Vidéo</h2><br>
         <div class="row">
