@@ -24,31 +24,43 @@
     </form>
     <div class="magasin-content">
         <div class="sidebar">
-            <label class="filters">Catégorie 1
+            <label class="filters">Animaux
                 <input id="1" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="filters">Catégorie 2
+            <label class="filters">Informatique
                 <input id="2" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="filters">Catégorie 3
+            <label class="filters">Jeux Video
                 <input id="3" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="filters">Catégorie 4
+            <label class="filters">Maison
                 <input id="4" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            <label class="filters">Catégorie 5
+
+            <label class="filters">Musique
                 <input id="5" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            <label class="filters">Catégorie 6
+
+            <label class="filters">Santé
                 <input id="6" type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="filters">Sports
+                <input id="7" type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="filters">Vêtements
+                <input id="8" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
         </div>
