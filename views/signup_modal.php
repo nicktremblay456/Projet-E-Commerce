@@ -1,4 +1,3 @@
-<!-- SIGN UP MODAL -->
 <div id="id02" class="modal">
     <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
     <form class="modal-content animate" action="/signup" method="post">
@@ -25,7 +24,7 @@
             <!--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
 
             <div class="container clearfix" style="background-color:#f1f1f1">
-                <button type="submit" class="button-modal">Sign Up</button>
+                <button type="submit" onsubmit="onSubmit(event)" id="sub" class="button-modal">Sign Up</button>
                 <button type="button" class="button-modal" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
             </div>
         </div>
