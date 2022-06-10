@@ -1,11 +1,7 @@
 <?php
-
 require_once $ROOT_PATH . 'views/db_controller.php';
 
 $allProducts = sqlQuery("SELECT * FROM produit")->fetchAll();
-
-
-
 
 generateViews();
 

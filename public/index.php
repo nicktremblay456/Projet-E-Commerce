@@ -35,6 +35,9 @@ else
 switch ($route) {
     case '/':
         $title = "Accueil";
+        if (isset($_POST['itemid'])) {
+            require $ROOT_PATH . "src/controllers/panier_controller.php";
+        }
         require $ROOT_PATH . "src/controllers/index_controller.php";
         break;
     case "/magasin":
