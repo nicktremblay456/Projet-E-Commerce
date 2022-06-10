@@ -95,10 +95,11 @@
                 <li class="page-item disabled">
                     <span class="page-link">Previous</span>
                 </li>
+                <? for ($i = 1; $i < 3; $i++) { ?>
                 <li class="page-item active" aria-current="page">
-                    <span class="page-link">1</span>
+                    <span class="page-link"><?= $i ?></span>
                 </li>
-                <li class="page-item"><a class="page-link" href="#"> 2</a></li>
+                <? } ?>
                 <li class="page-item">
                     <a class="page-link" href="#">Next</a>
                 </li>

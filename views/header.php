@@ -6,8 +6,8 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <? if (!isset($_SESSION['username'])) { ?>
-                <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Login</button>
-                <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Sign Up</button>
+                <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
+                <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Inscription</button>
             <? } else { ?>
                 <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= $_SESSION['username'] ?></strong></p>
                 <a href="/logout" class="btn btn-primary header-button" style="width: 120px;">Déconnexion</a>
