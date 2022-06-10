@@ -20,7 +20,7 @@ foreach ($accounts as $row) {
 
             setcookie(
                 'LOGGED_USER',
-                $row['Email'],
+                $row['ID'],
                 [
                     'expires' => time() + 365*24*3600,
                     'secure' => true,

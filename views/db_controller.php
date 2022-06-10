@@ -27,5 +27,7 @@ function sqlQuery($query) {
 
 function sqlQueryPrepare($query, $array) {
     global $pdo;
-    return $pdo->prepare($query)->execute($array);
+    $prep = $pdo->prepare($query);
+    $prep->execute($array);
+    return $prep->fetchAll();
 }

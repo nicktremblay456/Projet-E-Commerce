@@ -25,11 +25,6 @@ function generateViews()
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
-
-    # body
-    ob_start();
-    require($ROOT_PATH . "views/checkout_body.php");
-    $GLOBALS["checkoutBody"] = ob_get_clean();
 }
 
 if (isset($_SERVER["REDIRECT_URL"]))
@@ -44,6 +39,9 @@ switch ($route) {
         break;
     case "/magasin":
         $title = "Magasin";
+        if (isset($_POST['itemid'])) {
+            require $ROOT_PATH . "src/controllers/panier_controller.php";
+        }
         require $ROOT_PATH . "src/controllers/magasin_controller.php";
         break;
     case "/contact":
