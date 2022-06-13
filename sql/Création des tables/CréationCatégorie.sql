@@ -1,10 +1,10 @@
 insert into categorie (Categorie)
 Values
-(0),
-(1),
-(2),
-(3),
-(4),
-(5),
-(6),
-(7)
+("Animaux"),
+("Informatique"),
+("Jeux Vidéo"),
+("Maison"),
+("Musique"),
+("Sante"),
+("Sports"),
+("Vetements")
