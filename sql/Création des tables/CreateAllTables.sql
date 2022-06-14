@@ -7,7 +7,7 @@ CREATE TABLE client (
 );
 CREATE TABLE categorie (
     ID int NOT NULL AUTO_INCREMENT Primary key,
-    Categorie varchar(255) NOT NULL,
+    Categorie varchar(100) NOT NULL,
     INDEX(Categorie)
 );
 insert into categorie (Categorie)
@@ -26,10 +26,8 @@ CREATE TABLE produit (
     Description varchar(255) NOT NULL,
     Price float NOT NULL,
     CurrentStock int NOT NULL,
-    Category varchar(100) NOT NULL,
-    Path varchar(255) NOT NULL,
-
-    foreign key(Category) references categorie(Categorie)
+    Category int NOT NULL,
+    Path varchar(255) NOT NULL
 );
 create table panier (
 ID int not null auto_increment,
@@ -44,14 +42,13 @@ foreign key(Clientid) references client(ID),
 foreign key(Itemid) references produit(ID)
 );
 Create Table commande (
-ID int NOT NULL auto_increment,
+ID int NOT NULL,
+OrderNumber int,
 Clientid int not null,
-Itemid int not null,
-Quantity int not null,
 OrderDate date not null,
 primary key(ID),
-foreign key(Clientid) references panier(clientid),
-foreign key(Itemid) references panier(Itemid),
-foreign key(Quantity) references panier(Quantity)
+foreign key(Clientid) references panier(Clientid)
 );
+
+
 

@@ -8,7 +8,7 @@ $title = "Accueil";
 function generateViews()
 {
     global $ROOT_PATH;
-    
+
     # header used for every page
     ob_start();
     require($ROOT_PATH . 'views/header.php');
@@ -25,6 +25,10 @@ function generateViews()
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
+    ob_start();
+    require($ROOT_PATH . 'views/control_panel_modal.php');
+    $GLOBALS["controlPanelModal"] = ob_get_clean();
+
 }
 
 if (isset($_SERVER["REDIRECT_URL"]))
@@ -69,5 +73,9 @@ switch ($route) {
     case '/search':
         $title = "Search";
         require $ROOT_PATH . "src/controllers/search_controller.php";
+        break;
+    case '/control_panel':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/control_panel_controller.php";
         break;
 }

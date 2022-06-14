@@ -17,6 +17,7 @@ foreach ($accounts as $row) {
 
             $_SESSION['username'] = $username;
             $_SESSION['psw'] = $psw;
+            $_SESSION['isAdmin'] = $row["isAdmin"];
 
             setcookie(
                 'LOGGED_USER',
