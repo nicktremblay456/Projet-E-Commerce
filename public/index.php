@@ -80,6 +80,9 @@ switch ($route) {
         $title = "Search";
         require $ROOT_PATH . "src/controllers/search_controller.php";
         break;
+    case "/deletecart":
+        require $ROOT_PATH . "src/controllers/deletecart_controller.php";
+        break;
     case '/control_panel':
         $title = "Control Panel";
         require $ROOT_PATH . "src/controllers/control_panel_controller.php";
