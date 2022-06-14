@@ -5,10 +5,18 @@ $PUBLIC_PATH = $ROOT_PATH . "public/";
 
 $title = "Accueil";
 
+function get_cookie($cookie) {
+    if (isset($_COOKIE[$cookie])) {
+        return $_COOKIE[$cookie];
+    }
+
+    return false;
+}
+
 function generateViews()
 {
     global $ROOT_PATH;
-    
+
     # header used for every page
     ob_start();
     require($ROOT_PATH . 'views/header.php');
@@ -25,6 +33,10 @@ function generateViews()
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
+    ob_start();
+    require($ROOT_PATH . 'views/control_panel_modal.php');
+    $GLOBALS["controlPanelModal"] = ob_get_clean();
+
 }
 
 if (isset($_SERVER["REDIRECT_URL"]))
@@ -72,5 +84,9 @@ switch ($route) {
         break;
     case "/deletecart":
         require $ROOT_PATH . "src/controllers/deletecart_controller.php";
+        break;
+    case '/control_panel':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/control_panel_controller.php";
         break;
 }

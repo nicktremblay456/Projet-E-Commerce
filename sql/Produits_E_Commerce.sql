@@ -33,7 +33,7 @@ Values
 ('Diffuseur', 'huiles essentielles à distance - 300 ml - Diffuseur aromathérapie', 25, 5, 6, 'Diffuser.jpg'),
 ('Appareil elliptique', 'Sunny Health & Fitness  à programmation avancée avec résistance électromagnétique', 500, 5, 6, 'Elliptical.jpg'), 
 ('Montre', 'Charge 5 Tracker de fitness et de santé avancé avec GPS intégré, outils de gestion du stress', 100, 5, 6, 'Fit_watch.jpg'),
-('Genuine Health Greens Daily Detox', ' Poudre de détox naturelle avec de vrais légumes et herbes pour détoxifier le foie et les reins, saveur pomme verte, sans OGM, 406 g', '50', '5', 6, 'Greens.jpg'), 
+('Genuine Health Greens Daily Detox', ' Poudre de détox naturelle avec de vrais légumes et herbes pour détoxifier le foie et les reins, saveur pomme verte, sans OGM, 406 g', 50, 5, 6, 'Greens.jpg'), 
 ('Neutrogena Crème solaire', 'Une crème solaire ultra légère à absorption rapide offre une protection UVA/UVB avec SPF 60', 20, 10, 6, 'sunscreen.jpg'),
 
 ('Planche', 'CalmMax Planche de SUP gonflable – 3 x 81 x 15 cm avec planche antidérapante de qualité supérieure, pagaie, pompe, sac à dos – Idéal pour les jeunes adultes océans et sports', 1000, 2, 7, 'Boards.jpg'), 
@@ -45,5 +45,5 @@ Values
 ('Bavoirs', 'Bavoir pour bébé, facile à nettoyer, chaise haute réglable', 15, 15, 8, 'bibs.jpg'), 
 ('Smartwatch', 'Montre intelligente officielle Minecraft pour enfant avec caméra, enregistreur vocal, jeux, podomètre, alarme, chronomètre et calculatrice', 50, 15, 8, 'boy_watch.jpg'), 
 ('Chaussettes aquatiques', 'Pour la plage, la natation, la piscine - Sandales dextérieur (tout-petit/petit enfant)', 20, 15, 8, 'kid_shoes.jpg'), 
-('Chemise', 'Levis Style western classique à manches courtes pour homme', 40, 15,8, 'men_shirt.jpg'), 
+('Chemise', 'Levis Style western classique à manches courtes pour homme', 40, 15, 8, 'men_shirt.jpg'), 
 ('Haut pour femme', 'Débardeurs décontractés en dentelle brodée pour femme - Col en V - Tailles S à XXL', 35, 15, 8, 'woman_top.jpg');

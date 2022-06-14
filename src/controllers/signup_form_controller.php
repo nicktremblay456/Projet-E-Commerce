@@ -8,6 +8,17 @@ $email = $_POST['email'];
 $psw = $_POST['psw'];
 $pswRepeat = $_POST['psw-repeat'];
 
+if (isset($_POST['adminAccount'])){
+
+    $isAdmin = $_POST['adminAccount'];
+}
+
+if (isset($isAdmin)){
+    $isAdmin = 1;
+} else{
+    $isAdmin = 0;
+}
+
 if ($psw === $pswRepeat) {
     $hashPsw = password_hash($psw, PASSWORD_DEFAULT);
     #$hashPsw = hash("sha256", $psw);
@@ -19,8 +30,8 @@ if ($psw === $pswRepeat) {
         }
     }
     if ($accepted) {
-        sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw);",
-                        [':username' => $username, ':email' => $email, ':psw' => $hashPsw]);
+        sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw, :isAdmin);",
+                        [':username' => $username, ':email' => $email, ':psw' => $hashPsw, ':isAdmin' => $isAdmin]);
     }
 } else {
     $accepted = false;
