@@ -33,9 +33,7 @@ function generateViews()
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
-    ob_start();
-    require($ROOT_PATH . 'views/control_panel_modal.php');
-    $GLOBALS["controlPanelModal"] = ob_get_clean();
+    
 
 }
 
@@ -81,6 +79,9 @@ switch ($route) {
     case '/search':
         $title = "Search";
         require $ROOT_PATH . "src/controllers/search_controller.php";
+        break;
+    case "/deletecart":
+        require $ROOT_PATH . "src/controllers/deletecart_controller.php";
         break;
     case '/control_panel':
         $title = "Control Panel";
