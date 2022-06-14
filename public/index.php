@@ -33,9 +33,7 @@ function generateViews()
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
-    ob_start();
-    require($ROOT_PATH . 'views/control_panel_modal.php');
-    $GLOBALS["controlPanelModal"] = ob_get_clean();
+    
 
 }
 

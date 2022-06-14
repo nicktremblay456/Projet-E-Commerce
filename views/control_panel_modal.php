@@ -4,7 +4,7 @@
 
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link active" id="usersControl" aria-current="page" href="#" onclick="">Users</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Much longer nav link</a>

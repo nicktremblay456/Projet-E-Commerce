@@ -27,11 +27,11 @@ if (is_user_login()) {
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Inscription</button>
             <? } else { ?>
-                <? if ($_SESSION['isAdmin'] == 1) { ?>
-                    <button class="btn btn-primary header-button" style="width: 120px;" onclick="document.getElementById('id03').style.display='block'">Admin Panel</button>
-                <?  } ?>
-
+                
                 <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= get_username() ?></strong></p>
+                <? if ($_SESSION['isAdmin'] == 1) { ?>
+                    <a href="/control_panel" class="btn btn-primary header-button" style="width: 120px;">Admin Panel
+                <?  } ?>
                 <a href="/logout" class="btn btn-primary header-button" style="width: 120px;">Déconnexion</a>
                 <a href="/checkout" class="btn btn-primary header-button"> <?= count($panier) ?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">

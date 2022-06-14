@@ -110,6 +110,10 @@ textarea {
   margin: 8px 8px;
 }
 
+#admin-container{
+  height: 600px;
+}
+
 .button-modal {
   background-color: rgba(13, 110, 253);
   color: white;
