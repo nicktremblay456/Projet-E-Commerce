@@ -1,5 +1,6 @@
 <?php
-require $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . "src/controllers/auth_controller.php";
 
 $accounts = sqlQuery("SELECT * FROM client")->fetchAll();
 
@@ -15,19 +16,10 @@ foreach ($accounts as $row) {
             #echo "Password: " . $psw . "<br>";
             #echo "HashedPsw: " . $row["Password"];
 
-            $_SESSION['username'] = $username;
-            $_SESSION['psw'] = $psw;
             $_SESSION['isAdmin'] = $row["isAdmin"];
+            $_SESSION['userId'] = $row['ID'];
 
-            setcookie(
-                'LOGGED_USER',
-                $row['ID'],
-                [
-                    'expires' => time() + 365*24*3600,
-                    'secure' => true,
-                    'httponly' => true,
-                ]
-            );
+            create_login_token_cookie($row['ID']);
             break;
         }
     }

@@ -5,6 +5,14 @@ $PUBLIC_PATH = $ROOT_PATH . "public/";
 
 $title = "Accueil";
 
+function get_cookie($cookie) {
+    if (isset($_COOKIE[$cookie])) {
+        return $_COOKIE[$cookie];
+    }
+
+    return false;
+}
+
 function generateViews()
 {
     global $ROOT_PATH;
