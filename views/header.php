@@ -27,7 +27,6 @@ if (is_user_login()) {
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Inscription</button>
             <? } else { ?>
-                <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= $_SESSION['username'] ?></strong></p>
                 <? if ($_SESSION['isAdmin'] == 1) { ?>
                     <button class="btn btn-primary header-button" style="width: 120px;" onclick="document.getElementById('id03').style.display='block'">Admin Panel</button>
                 <?  } ?>
