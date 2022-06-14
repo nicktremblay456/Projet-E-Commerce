@@ -28,6 +28,8 @@ function sqlQuery($query) {
 function sqlQueryPrepare($query, $array) {
     global $pdo;
     $prep = $pdo->prepare($query);
-    $prep->execute($array);
+    if (!$prep->execute($array)) {
+        return false;
+    }
     return $prep->fetchAll();
 }

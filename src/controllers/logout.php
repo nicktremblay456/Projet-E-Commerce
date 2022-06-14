@@ -1,6 +1,7 @@
 <?php
+require_once $ROOT_PATH . 'src/controllers/auth_controller.php';
 
-setcookie('LOGGED_USER');
+delete_token_cookie();
 session_unset();
 
 header('location: /');

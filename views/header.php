@@ -1,13 +1,15 @@
 <?php
 require_once $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'src/controllers/auth_controller.php';
 
 $userId = "";
 $panier = [];
 
-if (isset($_SESSION['username'])) {
+if (is_user_login()) {
     global $panier;
     global $userId;
-    $userId = $_COOKIE['LOGGED_USER'];
+
+    $userId = $_SESSION['userId'];
     $panier = sqlQueryPrepare("SELECT Name, Price FROM panier INNER JOIN produit ON panier.Itemid = produit.ID WHERE panier.ClientId = :clientId",
                             ['clientId' => $userId]);
 }
@@ -21,11 +23,11 @@ if (isset($_SESSION['username'])) {
         <li><a href="/contact">Contact</a></li>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <? if (!isset($_SESSION['username'])) { ?>
+            <? if (!is_user_login()) { ?>
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
                 <button class="btn btn-primary header-button" onclick="document.getElementById('id02').style.display='block'">Inscription</button>
             <? } else { ?>
-                <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= $_SESSION['username'] ?></strong></p>
+                <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= get_username() ?></strong></p>
                 <a href="/logout" class="btn btn-primary header-button" style="width: 120px;">Déconnexion</a>
                 <a href="/checkout" class="btn btn-primary header-button"> <?= count($panier) ?> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
