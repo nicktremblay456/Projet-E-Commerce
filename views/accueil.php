@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
-<body>
+<body style="background-color: #6c757d;">
     <?= $header ?>
 
     <?= $loginModal ?>
@@ -21,7 +21,7 @@
     <div id="container-best-seller" class="container">
         <h2>Les plus demandés dans Jeux Vidéo</h2><br>
         <div class="row">
-            <? for ($i = 0; $i < 4; $i++) { ?>
+            <? if(count($videoGames) > 0) { for ($i = 0; $i < 4; $i++) { ?>
                 <div class="col">
                     <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $videoGames[$i]['Path'] ?>' class="card-img-top" alt="...">
@@ -40,14 +40,14 @@
                         </div>
                     </div>
                 </div>
-            <? } ?>
+            <? } } ?>
         </div>
     </div>
 
     <div id="container-best-seller" class="container">
         <h2>Les plus demandés dans Sport</h2><br>
         <div class="row">
-            <? for ($i = 0; $i < 4; $i++) { ?>
+            <? if (count($sports) > 0) { for ($i = 0; $i < 4; $i++) { ?>
                 <div class="col">
                     <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $sports[$i]['Path'] ?>' class="card-img-top" alt="...">
@@ -66,14 +66,14 @@
                         </div>
                     </div>
                 </div>
-            <? } ?>
+            <? } } ?>
         </div>
     </div>
 
     <div id="container-best-seller" class="container">
         <h2>Les plus demandés dans Vêtements</h2><br>
         <div class="row">
-            <? for ($i = 0; $i < 4; $i++) { ?>
+            <? if (count($clothes) > 0) { for ($i = 0; $i < 4; $i++) { ?>
                 <div class="col">
                     <div class="card h-100" style="width: 18rem; margin-bottom: 10px;">
                         <img src='../img/<?= $clothes[$i]['Path'] ?>' class="card-img-top" alt="...">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-            <? } ?>
+            <? } } ?>
         </div>
     </div>
 
