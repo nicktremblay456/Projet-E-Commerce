@@ -5,7 +5,8 @@ $PUBLIC_PATH = $ROOT_PATH . "public/";
 
 $title = "Accueil";
 
-function get_cookie($cookie) {
+function get_cookie($cookie)
+{
     if (isset($_COOKIE[$cookie])) {
         return $_COOKIE[$cookie];
     }
@@ -32,8 +33,6 @@ function generateViews() {
     ob_start();
     require($ROOT_PATH . 'views/signup_modal.php');
     $GLOBALS["signupModal"] = ob_get_clean();
-    
-
 }
 
 if (isset($_SERVER["REDIRECT_URL"]))
@@ -85,5 +84,13 @@ switch ($route) {
     case '/admin':
         $title = "Admin";
         require $ROOT_PATH . "src/controllers/control_panel_controller.php";
+        break;
+    case '/upload_item':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/item_addition_controller.php";
+        break;
+    case '/delete_item':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/item_removal_controller.php";
         break;
 }
