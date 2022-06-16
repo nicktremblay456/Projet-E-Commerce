@@ -90,4 +90,8 @@ switch ($route) {
         $title = "Control Panel";
         require $ROOT_PATH . "src/controllers/item_addition_controller.php";
         break;
+    case '/delete_item':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/item_removal_controller.php";
+        break;
 }

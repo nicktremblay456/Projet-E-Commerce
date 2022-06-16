@@ -30,7 +30,7 @@ if (is_user_login()) {
                 
                 <p class="h6" style="border-right: 2px solid white; padding: 0 16px; margin-top: 8px; color: white; align-self: center;"><strong>Utilisateur: <?= get_username() ?></strong></p>
                 <? if ($_SESSION['isAdmin'] == 1) { ?>
-                    <a href="/control_panel" class="btn btn-primary header-button" style="width: 120px;">Admin Panel
+                    <a href="/admin" class="btn btn-primary header-button" style="width: 120px;">Admin Panel
                 <?  } ?>
                 <a href="/logout" class="btn btn-primary header-button" style="width: 120px;">Déconnexion</a>
 
