@@ -1,5 +1,5 @@
 <?php
-require $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'views/db_controller.php';
 
 $accepted = true;
 
@@ -8,27 +8,30 @@ $email = $_POST['email'];
 $psw = $_POST['psw'];
 $pswRepeat = $_POST['psw-repeat'];
 
+# set the admin
 if (isset($_POST['adminAccount'])){
 
     $isAdmin = $_POST['adminAccount'];
+    if (isset($isAdmin)){
+        $isAdmin = 1;
+    } else{
+        $isAdmin = 0;
+    }
 }
 
-if (isset($isAdmin)){
-    $isAdmin = 1;
-} else{
-    $isAdmin = 0;
-}
 
 if ($psw === $pswRepeat) {
     $hashPsw = password_hash($psw, PASSWORD_DEFAULT);
     #$hashPsw = hash("sha256", $psw);
     
+    # check if it already exist
     $accounts = sqlQuery("SELECT * FROM client;")->fetchAll();
     foreach ($accounts as $row) {
         if ($username === $row["UserName"] || $email === $row["Email"]) {
             $accepted = false;
         }
     }
+    # if it doesn't exit, then add it to the db
     if ($accepted) {
         sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw, :isAdmin);",
                         [':username' => $username, ':email' => $email, ':psw' => $hashPsw, ':isAdmin' => $isAdmin]);

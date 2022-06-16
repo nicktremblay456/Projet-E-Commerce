@@ -13,8 +13,7 @@ function get_cookie($cookie) {
     return false;
 }
 
-function generateViews()
-{
+function generateViews() {
     global $ROOT_PATH;
 
     # header used for every page
