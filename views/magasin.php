@@ -79,8 +79,20 @@
                                     <form action="/magasin" method="post">
                                         <p class="card-text"><strong>En stock: <?= $product['CurrentStock'] ?></strong></p>
                                         <div style="display: flex; flex-direction: row;">
-                                            <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                            <input style="align-self: center;" type="range" min="1" max='<?= $product['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">
+                                            <p style="margin-right: 5px;"><strong>Quantité:</strong> <span name="quantityText"></span></p>
+                                            <select name="quantity" class="form-select" aria-label="Default select example">
+                                                <? for ($i = 0; $i < $product['CurrentStock']; $i++) { $amount = $i + 1;  ?>
+                                                <option 
+                                                    value='<?= $amount ?>'
+                                                    <? if ($amount === 1) { ?>
+                                                    selected
+                                                    <? } ?>
+                                                >
+                                                    <?= $amount ?>
+                                                </option>
+                                                <? } ?>
+                                            </select>
+                                            <!--<input style="align-self: center;" type="range" min="1" max='<?= $product['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">-->
                                         </div>
                                         <input type="hidden" name="itemid" value="<?= $product['ID'] ?>">
                                         <button type="submit" class="btn btn-primary">Ajouter au panier <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -114,9 +126,9 @@
             </ul>
         </nav>
     </div>
+    
     <?= $footer ?>
     
-    <script src="js/quantitySlider.js"></script>
     <script src="js/sidebarFilter.js"></script>
 </body>
 

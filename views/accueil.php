@@ -36,7 +36,18 @@
                                             <p class="card-text"><strong>En stock: <?= $videoGames[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                                <input style="align-self: center;" type="range" min="1" max='<?= $videoGames[$i]['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">
+                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                    <? for ($j = 0; $j < $videoGames[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <option 
+                                                        value='<?= $amount ?>'
+                                                        <? if ($amount === 1) { ?>
+                                                        selected
+                                                        <? } ?>
+                                                    >
+                                                        <?= $amount ?>
+                                                    </option>
+                                                    <? } ?>
+                                                </select>
                                             </div>
                                             <input type="hidden" name="itemid" value="<?= $videoGames[$i]['ID'] ?>">
                                             <button type="submit" class="btn btn-primary">Ajouter au panier <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -70,8 +81,19 @@
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
                                             <div style="display: flex; flex-direction: row;">
-                                                <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                                <input style="align-self: center;" type="range" min="1" max='<?= $sports[$i]['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">
+                                                <p><strong>Quantité: </strong></p>
+                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                    <? for ($j = 0; $j < $sports[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <option 
+                                                        value='<?= $amount ?>'
+                                                        <? if ($amount === 1) { ?>
+                                                        selected
+                                                        <? } ?>
+                                                    >
+                                                        <?= $amount ?>
+                                                    </option>
+                                                    <? } ?>
+                                                </select>
                                             </div>
                                             <input type="hidden" name="itemid" value="<?= $sports[$i]['ID'] ?>">
                                             <button type="submit" class="btn btn-primary">Ajouter au panier <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -106,7 +128,18 @@
                                         <form action="/" method="post">
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                                <input style="align-self: center;" type="range" min="1" max='<?= $clothes[$i]['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">
+                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                    <? for ($j = 0; $j < $clothes[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <option 
+                                                        value='<?= $amount ?>'
+                                                        <? if ($amount === 1) { ?>
+                                                        selected
+                                                        <? } ?>
+                                                    >
+                                                        <?= $amount ?>
+                                                    </option>
+                                                    <? } ?>
+                                                </select>
                                             </div>
                                             <input type="hidden" name="itemid" value="<?= $clothes[$i]['ID'] ?>">
                                             <button type="submit" class="btn btn-primary">Ajouter au panier <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -123,8 +156,6 @@
     </div>
 
     <?= $footer ?>
-
-    <script src="js/quantitySlider.js"></script>
 </body>
 
 </html>
