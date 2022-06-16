@@ -3,7 +3,7 @@ let radioButtons = document.getElementsByName("radio");
 
 radioButtons.forEach(radio => {
     radio.addEventListener('change', e => {
-        console.log(e);
+        console.log(e.path[1].innerText);
         filterMagasin(e.target.id);
     })
 });

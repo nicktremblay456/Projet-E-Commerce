@@ -318,14 +318,17 @@ textarea {
   animation: animatezoom 0.6s
 }
 
+.best-seller-title {
+  text-decoration: underline;
+}
+
 #container-best-seller {
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
   background-color: white; 
-  margin-top: 10px; 
-  padding-left: 62px; 
-  padding-right: 62px;
+  margin-top: 10px;
+  padding: 62px;
 }
 
 #nav {

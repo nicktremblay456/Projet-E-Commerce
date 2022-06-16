@@ -82,8 +82,8 @@ switch ($route) {
     case "/deletecart":
         require $ROOT_PATH . "src/controllers/deletecart_controller.php";
         break;
-    case '/control_panel':
-        $title = "Control Panel";
+    case '/admin':
+        $title = "Admin";
         require $ROOT_PATH . "src/controllers/control_panel_controller.php";
         break;
     case '/upload_item':
