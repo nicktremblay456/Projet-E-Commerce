@@ -6,8 +6,6 @@ if (get_cookie('LOGGED_USER')) {
     $itemId = $_POST['itemid'];
     $quantity = $_POST['quantitySlider'];
 
-    echo $quantity;
-
     # add to card
     sqlQueryPrepare("INSERT INTO panier VALUES(null, :ClientId, :ItemId, :Quantity);",
                     ['ClientId' => $userId, 'ItemId' => $itemId, 'Quantity' => $quantity]);
