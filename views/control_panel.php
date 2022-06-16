@@ -34,22 +34,40 @@
             </li>
         </ul>
     </div>
-    <div class="container" style="height: 600px" id="itemManagement">
+    <div class="container" style="height: 100%" id="itemManagement">
 
         <h1>Ajouts d'item au magasin.</h1>
         <hr>
-        <label for="itemname"><b>Nom de l'item</b></label>
-        <input type="text" placeholder="Entrer le nom de l'item." id="itemname" name="itemname" required>
+        <form action="/upload_item" method="post">
+            <label for="itemName"><b>Nom de l'item</b></label>
+            <input type="text" placeholder="Entrer le nom de l'item." id="itemName" name="itemName" required>
 
-        <label for="itemDescription"><b>Description</b></label>
-        <input type="text" placeholder="Entrer une description." id="itemDescription" name="itemDescription" required>
+            <label for="itemDescription"><b>Description</b></label>
+            <input type="text" placeholder="Entrer une description." id="itemDescription" name="itemDescription" required>
 
-        <label for="itemPrice"><b>Price</b></label>
-        <input type="text" placeholder="Entrer un prix." id="itemPrice" name="itemPrice" required>
+            <label for="itemPrice"><b>Prix</b></label>
+            <input type="text" placeholder="Entrer un prix." id="itemPrice" name="itemPrice" required>
 
-        <label for="itemPrice"><b>Photos de l'item</b></label>
-        <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename">
+            <label for="itemStock"><b>Nombres en stock</b></label>
+            <input type="text" placeholder="Entrer le nombere en stock." id="itemStock" name="itemStock" required>
+
+            <label for="itemCategory"><b>Categorie</b></label>
+
+                <select name="itemCategory" id="itemCategory" required>
+                    <option value="1">Animaux</option>
+                    <option value="2">Informatique </option>
+                    <option value="3">Jeux Video </option>
+                    <option value="4">Maison </option>
+                    <option value="5">Musique </option>
+                    <option value="6">Sante </option>
+                    <option value="7">Sports </option>
+                    <option value="8">Vetements </option>
+                </select>
+                <br>
+                
+
+            <label for="itemPicture"><b>Photos de l'item</b></label>
+            <input type="file" id="itemPicture" name="itemPicture" required> <br>
             <input type="submit">
         </form>
     </div>

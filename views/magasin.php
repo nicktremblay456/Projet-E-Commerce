@@ -25,42 +25,42 @@
     <div class="magasin-content">
         <div class="sidebar">
             <label class="filters">Animaux
-                <input id="Animaux" type="radio" name="radio">
+                <input id="1" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Informatique
-                <input id="Informatique" type="radio" name="radio">
+                <input id="2" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Jeux Video
-                <input id="Jeux Video" type="radio" name="radio">
+                <input id="3" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Maison
-                <input id="Maison" type="radio" name="radio">
+                <input id="4" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Musique
-                <input id="Musique" type="radio" name="radio">
+                <input id="5" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Santé
-                <input id="Sante" type="radio" name="radio">
+                <input id="6" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Sports
-                <input id="Sports" type="radio" name="radio">
+                <input id="7" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
 
             <label class="filters">Vêtements
-                <input id="Vetements" type="radio" name="radio">
+                <input id="8" type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -68,7 +68,7 @@
             <div class='container'>
                 <div class='row'>
                     <? foreach ($allProducts as $product) { ?>
-                        <div name='<?= $product['Category'] ?>' class='col col-content'>
+                        <div name='<?= $product['Category']?>' class='col col-content'>
                             <div class='card h-100' style='width: 18rem;'>
                                 <img src='../img/<?= $product['Path'] ?>' class='card-img-top' alt='...'>
                                 <div class='card-body'>
