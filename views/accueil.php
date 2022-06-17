@@ -62,8 +62,7 @@
             </div>
         </div>
 
-        <br>
-        <hr><br>
+        <br><hr><br>
 
         <div>
             <h2 class="best-seller-title">Les plus demandés dans Sport</h2><br>
@@ -80,6 +79,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
+                                            <p class="card-text"><strong>En stock: <?= $sports[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité: </strong></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">
@@ -108,8 +108,7 @@
             </div>
         </div>
 
-        <br>
-        <hr><br>
+        <br><hr><br>
 
         <div>
             <h2 class="best-seller-title">Les plus demandés dans Vêtements</h2><br>
@@ -126,6 +125,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
+                                            <p class="card-text"><strong>En stock: <?= $clothes[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">

@@ -6,7 +6,8 @@ if (get_cookie('LOGGED_USER')) {
     $itemId = $_POST['itemid'];
     $quantity = $_POST['quantity'];
 
-    # add to card
-    sqlQueryPrepare("INSERT INTO panier VALUES(null, :ClientId, :ItemId, :Quantity);",
-                    ['ClientId' => $userId, 'ItemId' => $itemId, 'Quantity' => $quantity]);
+    # add to card if item exist
+    if (!sqlQueryPrepare("INSERT INTO panier VALUES(null, :ClientId, :ItemId, :Quantity);", ['ClientId' => $userId, 'ItemId' => $itemId, 'Quantity' => $quantity]) === false) {
+        echo '<script>alert("Produit invalide..."); location="/";</script>';
+    }
 }
