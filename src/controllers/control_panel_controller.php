@@ -1,6 +1,5 @@
 <?php
-
-require $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'src/controllers/db_controller.php';
 
 generateViews();
 
