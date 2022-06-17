@@ -1,5 +1,5 @@
 <?php
-require_once $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'src/controllers//db_controller.php';
 
 if (get_cookie('LOGGED_USER')) {
     $userId = $_SESSION['userId'];

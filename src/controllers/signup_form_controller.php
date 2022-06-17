@@ -1,5 +1,5 @@
 <?php
-require_once $ROOT_PATH . 'views/db_controller.php';
+require_once $ROOT_PATH . 'src/controllers/db_controller.php';
 
 $accepted = true;
 
@@ -44,7 +44,6 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) 
 } else {
     echo '<script>alert("Vous devez créez un compte avant de vous connecter..."); location="/";</script>';
 }
-
 
 
 generateViews();
