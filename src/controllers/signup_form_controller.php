@@ -9,15 +9,8 @@ $psw = $_POST['psw'];
 $pswRepeat = $_POST['psw-repeat'];
 
 # set the admin
-if (isset($_POST['adminAccount'])){
-
     $isAdmin = $_POST['adminAccount'];
-    if (isset($isAdmin)){
-        $isAdmin = 1;
-    } else{
-        $isAdmin = 0;
-    }
-}
+
 
 
 if ($psw === $pswRepeat) {

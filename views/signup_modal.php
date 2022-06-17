@@ -16,9 +16,10 @@
 
             <label for="psw-repeat"><b>Répeter le mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe de nouveau" name="psw-repeat" required>
+            <input type="hidden" name="adminAccount" id="adminAccount" value="0" />
             
-            <input type="checkbox" name="adminAccount" id="adminAccount" style="margin-bottom:15px" value="1"> Admin Account
             <!--<label>
+                <input type="checkbox" name="adminAccount" id="adminAccount" style="margin-bottom:15px" value="1"> Admin Account
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
             </label>-->
 

@@ -14,7 +14,8 @@ function get_cookie($cookie)
     return false;
 }
 
-function generateViews() {
+function generateViews()
+{
     global $ROOT_PATH;
 
     # header used for every page
@@ -92,5 +93,9 @@ switch ($route) {
     case '/delete_item':
         $title = "Control Panel";
         require $ROOT_PATH . "src/controllers/item_removal_controller.php";
+        break;
+    case '/access_mgmt':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/access_mgmt_controller.php";
         break;
 }
