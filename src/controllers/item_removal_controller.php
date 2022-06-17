@@ -1,12 +1,12 @@
 <?php
 require_once $ROOT_PATH . 'src/controllers/db_controller.php';
+require_once $ROOT_PATH . 'src/controllers/control_panel_controller.php';
 
 generateViews();
 
 $itemToDelete = $_POST['itemSupp'];
 $fileName = sqlQueryPrepare("SELECT Path FROM produit WHERE ID = :ID;",['ID' => $itemToDelete]);
 sqlQueryPrepare("DELETE FROM produit WHERE ID = :ID;",['ID' => $itemToDelete]);
-$result = sqlQuery("SELECT ID, Name, Category FROM produit;");
 
 
 $file_name = $fileName[0]['Path']; // file name from front end
