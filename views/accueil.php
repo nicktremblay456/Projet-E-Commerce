@@ -35,7 +35,7 @@
                                         <form action="/" method="post">
                                             <p class="card-text"><strong>En stock: <?= $videoGames[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
-                                                <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
+                                                <p><strong>Quantité:</strong></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">
                                                     <? for ($j = 0; $j < $videoGames[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
                                                     <option 
