@@ -78,11 +78,12 @@
                                 </div>
                                 <div style="display: flex; justify-content: space-around; margin: 5px;">
                                     <form action="/magasin" method="post">
-                                        <p class="card-text"><strong>En stock: <?= $product['CurrentStock'] ?></strong></p>
+                                        <p class="card-text"><strong>En stock: <?= is_user_login() ? $product['Diff'] : $product['CurrentStock'] ?></strong></p>
                                         <div style="display: flex; flex-direction: row;">
-                                            <p style="margin-right: 5px;"><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                            <select name="quantity" class="form-select" aria-label="Default select example">
-                                                <? for ($i = 0; $i < $product['CurrentStock']; $i++) { $amount = $i + 1;  ?>
+                                            <p style="margin-right: 5px;"><strong>Quantité:</strong></p>
+                                            <select name="quantity" class="form-select" style="margin-bottom: 5px;">
+                                                <? $currentStock = isset($_SESSION['userId']) ? $product['Diff'] : $product['CurrentStock']; 
+                                                for ($i = 0; $i < $currentStock; $i++) { $amount = $i + 1;  ?>
                                                 <option 
                                                     value='<?= $amount ?>'
                                                     <? if ($amount === 1) { ?>
@@ -93,7 +94,6 @@
                                                 </option>
                                                 <? } ?>
                                             </select>
-                                            <!--<input style="align-self: center;" type="range" min="1" max='<?= $product['CurrentStock'] ?>' value="1" class="slider" name="quantitySlider">-->
                                         </div>
                                         <input type="hidden" name="itemid" value="<?= $product['ID'] ?>">
                                         <button type="submit" class="btn btn-primary">Ajouter au panier <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
