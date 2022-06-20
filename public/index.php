@@ -94,6 +94,10 @@ switch ($route) {
         $title = "Control Panel";
         require $ROOT_PATH . "src/controllers/item_removal_controller.php";
         break;
+    case '/modify_item':
+        $title = "Control Panel";
+        require $ROOT_PATH . "src/controllers/item_modif_controller.php";
+        break;
     case '/access_mgmt':
         $title = "Control Panel";
         require $ROOT_PATH . "src/controllers/access_mgmt_controller.php";
