@@ -82,7 +82,7 @@
                                         <div style="display: flex; flex-direction: row;">
                                             <p style="margin-right: 5px;"><strong>Quantité:</strong></p>
                                             <select name="quantity" class="form-select" style="margin-bottom: 5px;">
-                                                <? $currentStock = isset($_SESSION['userId']) ? $product['Diff'] : $product['CurrentStock']; 
+                                                <? $currentStock = is_user_login() ? $product['Diff'] : $product['CurrentStock']; 
                                                 for ($i = 0; $i < $currentStock; $i++) { $amount = $i + 1;  ?>
                                                 <option 
                                                     value='<?= $amount ?>'

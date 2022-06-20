@@ -11,9 +11,9 @@
             <label for="psw"><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer Mot de Passe" id="psw" name="psw" required>
 
-            <label>
+            <!--<label>
                 <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
-            </label>
+            </label>-->
         </div>
         
         <div class="container clearfix" >

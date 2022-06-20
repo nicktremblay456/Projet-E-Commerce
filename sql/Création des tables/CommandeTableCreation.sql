@@ -4,6 +4,5 @@ OrderNumber int,
 Clientid int not null,
 OrderDate date not null,
 primary key(ID),
-foreign key(Clientid) references client(Clientid)
+foreign key(Clientid) references client(ID)
 );
-

@@ -37,7 +37,7 @@
                                         <p class="card-text"><strong>En stock: <?= is_user_login() ? $videoGames[$i]['Diff'] : $videoGames[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong></p>
-                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                <select name="quantity" class="form-select" aria-label="Default select example" style="margin-bottom: 10px;">
                                                     <? $currentStock = $currentStock = is_user_login() ? $videoGames[$i]['Diff'] : $videoGames[$i]['CurrentStock'];
                                                     for ($j = 0; $j < $currentStock; $j++) { 
                                                         $amount = $j + 1;  ?>
@@ -85,7 +85,7 @@
                                             <p class="card-text"><strong>En stock: <?= is_user_login() ? $sports[$i]['Diff'] : $sports[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong></p>
-                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                <select name="quantity" class="form-select" aria-label="Default select example" style="margin-bottom: 10px;">
                                                     <? $currentStock = $currentStock = is_user_login() ? $sports[$i]['Diff'] : $sports[$i]['CurrentStock'];
                                                     for ($j = 0; $j < $currentStock; $j++) { 
                                                         $amount = $j + 1;  ?>
@@ -133,7 +133,7 @@
                                             <p class="card-text"><strong>En stock: <?= is_user_login() ? $clothes[$i]['Diff'] : $clothes[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong></p>
-                                                <select name="quantity" class="form-select" aria-label="Default select example">
+                                                <select name="quantity" class="form-select" aria-label="Default select example" style="margin-bottom: 10px;">
                                                     <? $currentStock = $currentStock = is_user_login() ? $clothes[$i]['Diff'] : $clothes[$i]['CurrentStock'];
                                                     for ($j = 0; $j < $currentStock; $j++) { 
                                                         $amount = $j + 1;  ?>

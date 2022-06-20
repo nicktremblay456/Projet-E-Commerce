@@ -15,12 +15,13 @@
 
 <body style="background-color: #6c757d;">
     <?= $header ?>
+
     <?= $loginModal ?>
     <?= $signupModal ?>
 
     <div class="container card" style="margin-top: 10px;">
         <h3>Nous contacter</h3>
-        <form action="/action_page.php">
+        <form action="/contact" method="post">
             <label for="fname"><b>First Name</b></label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 

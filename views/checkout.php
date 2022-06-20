@@ -16,6 +16,7 @@
 
 <body style="background-color: #6c757d;">
     <?= $header ?>
+    
     <?= $loginModal ?>
     <?= $signupModal ?>
 

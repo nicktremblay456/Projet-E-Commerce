@@ -21,7 +21,6 @@ if (is_user_login()) {
         }
     }
 }
-
 ?>
 
 <header class="accueil_header">
