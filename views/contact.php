@@ -8,6 +8,7 @@
 
     <title><?= $title ?></title>
 
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>

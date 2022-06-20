@@ -8,6 +8,7 @@
 
     <title><?= $title ?></title>
 
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -33,11 +34,13 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
-                                            <p class="card-text"><strong>En stock: <?= $videoGames[$i]['CurrentStock'] ?></strong></p>
+                                        <p class="card-text"><strong>En stock: <?= is_user_login() ? $videoGames[$i]['Diff'] : $videoGames[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p><strong>Quantité:</strong></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">
-                                                    <? for ($j = 0; $j < $videoGames[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <? $currentStock = $currentStock = is_user_login() ? $videoGames[$i]['Diff'] : $videoGames[$i]['CurrentStock'];
+                                                    for ($j = 0; $j < $currentStock; $j++) { 
+                                                        $amount = $j + 1;  ?>
                                                     <option 
                                                         value='<?= $amount ?>'
                                                         <? if ($amount === 1) { ?>
@@ -79,11 +82,13 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
-                                            <p class="card-text"><strong>En stock: <?= $sports[$i]['CurrentStock'] ?></strong></p>
+                                            <p class="card-text"><strong>En stock: <?= is_user_login() ? $sports[$i]['Diff'] : $sports[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
-                                                <p><strong>Quantité: </strong></p>
+                                                <p><strong>Quantité:</strong></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">
-                                                    <? for ($j = 0; $j < $sports[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <? $currentStock = $currentStock = is_user_login() ? $sports[$i]['Diff'] : $sports[$i]['CurrentStock'];
+                                                    for ($j = 0; $j < $currentStock; $j++) { 
+                                                        $amount = $j + 1;  ?>
                                                     <option 
                                                         value='<?= $amount ?>'
                                                         <? if ($amount === 1) { ?>
@@ -125,11 +130,13 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-around; margin: 5px;">
                                         <form action="/" method="post">
-                                            <p class="card-text"><strong>En stock: <?= $clothes[$i]['CurrentStock'] ?></strong></p>
+                                            <p class="card-text"><strong>En stock: <?= is_user_login() ? $clothes[$i]['Diff'] : $clothes[$i]['CurrentStock'] ?></strong></p>
                                             <div style="display: flex; flex-direction: row;">
-                                                <p><strong>Quantité:</strong> <span name="quantityText"></span></p>
+                                                <p><strong>Quantité:</strong></p>
                                                 <select name="quantity" class="form-select" aria-label="Default select example">
-                                                    <? for ($j = 0; $j < $clothes[$i]['CurrentStock']; $j++) { $amount = $j + 1;  ?>
+                                                    <? $currentStock = $currentStock = is_user_login() ? $clothes[$i]['Diff'] : $clothes[$i]['CurrentStock'];
+                                                    for ($j = 0; $j < $currentStock; $j++) { 
+                                                        $amount = $j + 1;  ?>
                                                     <option 
                                                         value='<?= $amount ?>'
                                                         <? if ($amount === 1) { ?>

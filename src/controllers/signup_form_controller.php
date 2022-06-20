@@ -3,34 +3,32 @@ require_once $ROOT_PATH . 'src/controllers/db_controller.php';
 
 $accepted = true;
 
-if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['psw-repeat'])) {
+if (isset($_POST['username'], $_POST['email'], $_POST['psw'], $_POST['psw-repeat'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $psw = $_POST['psw'];
     $pswRepeat = $_POST['psw-repeat'];
 
-# set the admin
+    # set the admin
     $isAdmin = $_POST['adminAccount'];
 
-
-
-if ($psw === $pswRepeat) {
-    $hashPsw = password_hash($psw, PASSWORD_DEFAULT);
-    #$hashPsw = hash("sha256", $psw);
-    
-        $isAdmin = $_POST['adminAccount'];
-        if (isset($isAdmin)){
-            $isAdmin = 1;
-        } else{
-            $isAdmin = 0;
-        }
-    }
-    
-    
     if ($psw === $pswRepeat) {
         $hashPsw = password_hash($psw, PASSWORD_DEFAULT);
         #$hashPsw = hash("sha256", $psw);
-        
+
+        $isAdmin = $_POST['adminAccount'];
+        if (isset($isAdmin)) {
+            $isAdmin = 1;
+        } else {
+            $isAdmin = 0;
+        }
+    }
+
+
+    if ($psw === $pswRepeat) {
+        $hashPsw = password_hash($psw, PASSWORD_DEFAULT);
+        #$hashPsw = hash("sha256", $psw);
+
         # check if it already exist
         $accounts = sqlQuery("SELECT * FROM client;")->fetchAll();
         foreach ($accounts as $row) {
@@ -40,8 +38,10 @@ if ($psw === $pswRepeat) {
         }
         # if it doesn't exit, then add it to the db
         if ($accepted) {
-            sqlQueryPrepare("INSERT INTO client VALUES(null, :username, :email, :psw, :isAdmin);",
-                            [':username' => $username, ':email' => $email, ':psw' => $hashPsw, ':isAdmin' => $isAdmin]);
+            sqlQueryPrepare(
+                "INSERT INTO client VALUES(null, :username, :email, :psw, :isAdmin);",
+                [':username' => $username, ':email' => $email, ':psw' => $hashPsw, ':isAdmin' => $isAdmin]
+            );
         }
     } else {
         $accepted = false;
