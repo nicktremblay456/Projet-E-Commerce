@@ -21,20 +21,20 @@
         <h2>Panneau de control Administrateur</h2><br>
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" id="BtnAdd" aria-current="page">Ajouts d'items</a>
+                <a class="nav-link" id="BtnAdd" aria-current="page">Ajouts d'items</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="BtnRemove">Suppression d'items</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="BtnItemModif">Modification d'items</a>
+                <a class="nav-link active" id="BtnItemModif">Modification d'items</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="BtnAccess">Gestion des Permissions</a>
             </li>
         </ul>
     </div>
-    <div class="container" style="height: 100%" id="itemAddition">
+    <div class="container" style="height: 100%; display: none;" id="itemAddition">
         <?php
         if (isset($_SESSION['message']) && $_SESSION['message']) {
             echo '<p class="notification">' . $_SESSION['message'] . '</p>';
@@ -61,11 +61,11 @@
             <label for="itemCategory"><b>Categorie</b></label>
 
             <select name="itemCategory" id="itemCategory" required>
-            <?foreach ($allCategory as $category) {?>
-                    
-                    <option value="<?=$category['ID']?>"><?=$category['Categorie'] ?> </option>
+                <? foreach ($allCategory as $category) { ?>
 
-                    <? }?>
+                    <option value="<?= $category['ID'] ?>"><?= $category['Categorie'] ?> </option>
+
+                <? } ?>
             </select>
             <br>
 
@@ -126,36 +126,43 @@
             </form>
         </div>
     </div>
-    <div class="container" style="height: 100%; display: none;" id="ItemFields">
-    <hr>
+    <div class="container" style="height: 100%;" id="ItemFields">
+        <hr>
         <h1>Modification des Items</h1>
         <hr>
-        <form action="/upload_item" method="post" enctype="multipart/form-data">
+        <form action="/modify_item" method="post" enctype="multipart/form-data">
+            <label for="itemID"><b>ID de l'item</b></label>
+            <input type="text" value="<?= $itemToModify[0]['ID'] ?>" id="itemIDModif" name="itemIDModif" readonly>
             <label for="itemName"><b>Nom de l'item</b></label>
-            <input type="text" placeholder="Entrer le nom de l'item." id="itemName" name="itemName" required>
+            <input type="text" value="<?= $itemToModify[0]['Name'] ?>" id="itemNameModif" name="itemNameModif" required>
 
             <label for="itemDescription"><b>Description</b></label>
-            <input type="text" placeholder="Entrer une description." id="itemDescription" name="itemDescription" required>
+            <input type="text" value="<?= $itemToModify[0]['Description'] ?>" id="itemDescriptionModif" name="itemDescriptionModif" required>
 
             <label for="itemPrice"><b>Prix</b></label>
-            <input type="text" placeholder="Entrer un prix." id="itemPrice" name="itemPrice" required>
+            <input type="text" value="<?= $itemToModify[0]['Price'] ?>" id="itemPriceModif" name="itemPriceModif" required>
 
             <label for="itemStock"><b>Nombres en stock</b></label>
-            <input type="text" placeholder="Entrer le nombre en stock." id="itemStock" name="itemStock" required>
+            <input type="text" value="<?= $itemToModify[0]['CurrentStock'] ?>" id="itemStockModif" name="itemStockModif" required>
 
             <label for="itemCategory"><b>Categorie</b></label>
 
-            <select name="itemCategory" id="itemCategory" required>
-            <?foreach ($allCategory as $category) {?>
-                    
-                    <option value="<?=$category['ID']?>"><?=$category['Categorie'] ?> </option>
+            <select name="itemCategoryModif" id="itemCategoryModif" required>
+                <? foreach ($allCategory as $category) { ?>
 
-                    <? }?>
-                
+                    <option value="<?= $category['ID'] ?>"><?= $category['Categorie'] ?> </option>
+
+                <? } ?>
+
             </select>
             <br>
 
-            <label for="itemPicture"><b>Photos de l'item</b></label>
+            <label for="itemPictureModif"><b>Photos de l'item</b></label>
+
+
+            <img src='../img/<?= $itemToModify[0]['Path'] ?>' alt='...' width="200px" height="200px">
+
+            <br>
             <input type="file" name="uploadedFile"> <br>
             <input type="submit" name="uploadBtn" value="Upload">
         </form>
