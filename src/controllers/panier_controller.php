@@ -7,16 +7,18 @@ if (get_cookie('LOGGED_USER')) {
         $itemId = $_POST['itemid'];
         $quantity = $_POST['quantity'];
 
-        $res = sqlQueryPrepare("SELECT CurrentStock FROM produit WHERE ID = :id", ['id' => $itemId]);
-
-        if ($quantity <= 0) {
-            $quantity = 1;
-        }
-
-        if ($quantity <= $res[0]['CurrentStock']) {
-            # add to card if item exist
-            if (!sqlQueryPrepare("INSERT INTO panier VALUES(null, :ClientId, :ItemId, :Quantity);", ['ClientId' => $userId, 'ItemId' => $itemId, 'Quantity' => $quantity]) === false) {
-                echo '<script>alert("Produit invalide..."); location="/";</script>';
+        # check if the item id exist and if the quantity is <= to the currentstock in db
+        $res = sqlQueryPrepare("SELECT ID, CurrentStock FROM produit WHERE ID = :id", ['id' => $itemId]);
+        if ($res) {
+            if ($quantity <= 0) {
+                $quantity = 1;
+            }
+    
+            if ($quantity <= $res[0]['CurrentStock']) {
+                # add to card if item exist
+                if (!sqlQueryPrepare("INSERT INTO panier VALUES(null, :ClientId, :ItemId, :Quantity);", ['ClientId' => $userId, 'ItemId' => $itemId, 'Quantity' => $quantity]) === false) {
+                    echo '<script>alert("Produit invalide..."); location="/";</script>';
+                }
             }
         }
     }
