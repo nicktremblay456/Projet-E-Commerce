@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body >
     <?= $header ?>
     <?= $loginModal ?>
     <?= $signupModal ?>
@@ -25,45 +25,12 @@
     </form>
     <div class="magasin-content">
         <div class="sidebar">
-            <label class="filters">Animaux
-                <input id="Animaux" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Informatique
-                <input id="Informatique" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Jeux Video
-                <input id="Jeux Video" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Maison
-                <input id="Maison" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Musique
-                <input id="Musique" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Santé
-                <input id="Sante" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Sports
-                <input id="Sports" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Vêtements
-                <input id="Vetements" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
+            <? foreach($allCategory as $category) { ?>
+                <label class="filters"><?= $category['CategoryName'] ?>
+                    <input id='<?= $category['ID'] ?>' type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            <? } ?>
         </div>
         <div class='container-content'>
             <div class='container'>
@@ -81,7 +48,7 @@
                                         <p class="card-text"><strong>En stock: <?= $product['CurrentStock'] ?></strong></p>
                                         <div style="display: flex; flex-direction: row;">
                                             <p style="margin-right: 5px;"><strong>Quantité:</strong> <span name="quantityText"></span></p>
-                                            <select name="quantity" class="form-select" aria-label="Default select example">
+                                            <select name="quantity" class="form-select" aria-label="Default select example" style="margin-bottom: 5px;">
                                                 <? for ($i = 0; $i < $product['CurrentStock']; $i++) {
                                                     $amount = $i + 1;  ?>
                                                     <option value='<?= $amount ?>' <? if ($amount === 1) { ?> selected <? } ?>>

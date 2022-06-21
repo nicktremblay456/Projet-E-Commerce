@@ -20,5 +20,4 @@ if(file_exists($location_with_image_name)){
 	}
 }
 
-
 require $ROOT_PATH . "views/control_panel.php";

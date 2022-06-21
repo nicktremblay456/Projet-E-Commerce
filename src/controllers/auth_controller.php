@@ -41,10 +41,11 @@ function create_login_token_cookie($userId) {
     $res = sqlQueryPrepare("INSERT INTO user_tokens (selector, hashed_validator, user_id, expiry) VALUES(:selector, :validator, :userId, :expiry);",
                     [':selector' => $selector, ':validator' => password_hash($validator, PASSWORD_DEFAULT), ':userId' => $userId, ':expiry' => $expiry]);
     if ($res !== false) {
+        #create cookie
         setcookie('LOGGED_USER', $selector.':'.$validator, $expired_seconds);
 
     } else {
-        // pleure
+        // pleure KEKW
     }
 }
 
@@ -73,6 +74,7 @@ function delete_token_cookie() {
     if ($selector) {
         $res = sqlQueryPrepare("DELETE FROM user_tokens WHERE selector = :selector", [':selector' => $selector]);
         if ($res !== false) {
+            #delete cookie
             setcookie('LOGGED_USER');
         }
     }

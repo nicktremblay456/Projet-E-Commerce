@@ -62,11 +62,9 @@
             <label for="itemCategory"><b>Categorie</b></label>
 
             <select name="itemCategory" id="itemCategory" required>
-            <?foreach ($allCategory as $category) {?>
-                    
-                    <option value="<?=$category['ID']?>"><?=$category['Categorie'] ?> </option>
-
-                    <? }?>
+                <?foreach ($allCategory as $category) {?>
+                    <option value="<?=$category['ID']?>"> <?=$category['CategoryName']?> </option>
+                <? } ?>
             </select>
             <br>
 

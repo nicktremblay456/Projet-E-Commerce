@@ -9,6 +9,8 @@ if (isset($_POST['search'])) {
     $products = sqlQuery("SELECT * FROM produit WHERE Description LIKE '$search'")->fetchAll();
 }
 
+$allCategory = sqlQuery("SELECT * FROM Categorie")->fetchAll();
+
 generateViews();
 
 require $ROOT_PATH . "views/search.php";

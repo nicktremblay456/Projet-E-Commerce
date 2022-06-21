@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color: #6c757d;">
+<body>
     <?= $header ?>
     <?= $loginModal ?>
     <?= $signupModal ?>
@@ -25,45 +25,12 @@
     </form>
     <div class="magasin-content">
         <div class="sidebar">
-            <label class="filters">Animaux
-                <input id="1" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Informatique
-                <input id="2" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Jeux Video
-                <input id="3" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Maison
-                <input id="4" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Musique
-                <input id="5" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Santé
-                <input id="6" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Sports
-                <input id="7" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="filters">Vêtements
-                <input id="8" type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
+            <? foreach($allCategory as $category) { ?>
+                <label class="filters"><?= $category['CategoryName'] ?>
+                    <input id='<?= $category['ID'] ?>' type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            <? } ?>
         </div>
         <div class='container-content'>
             <div class='container'>

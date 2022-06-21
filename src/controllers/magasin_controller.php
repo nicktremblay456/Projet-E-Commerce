@@ -9,6 +9,8 @@ if (is_user_login()) {
     $allProducts = sqlQuery("SELECT * FROM produit")->fetchAll();
 }
 
+$allCategory = sqlQuery("SELECT * FROM Categorie")->fetchAll();
+
 generateViews();
 
 require $ROOT_PATH . "views/magasin.php";

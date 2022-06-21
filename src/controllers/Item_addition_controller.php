@@ -1,5 +1,4 @@
 <?php
-
 require_once $ROOT_PATH . 'src/controllers/db_controller.php';
 require_once $ROOT_PATH . 'src/controllers/control_panel_controller.php';
 

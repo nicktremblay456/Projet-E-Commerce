@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
-<body style="background-color: #6c757d;">
+<body>
     <?= $header ?>
 
     <?= $loginModal ?>
